@@ -19,14 +19,14 @@ export default function Navbar() {
           </a>
         </div>
         <div className="flex fixed right-8 space-x-8 text-gray-300 text-lg font-Poppins z-1">
+          <a href="/signup" className="hover:text-white hover:underline invisible">
+            <p>
+              Sign Up
+            </p>
+          </a>
           <a href="/login" className="hover:text-white hover:underline">
             <p>
               Login
-            </p>
-          </a>
-          <a href="/signup" className="hover:text-white hover:underline">
-            <p>
-              Sign Up
             </p>
           </a>
         </div>

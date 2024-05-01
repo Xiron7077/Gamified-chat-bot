@@ -6,9 +6,9 @@ export default function TextType() {
   return (
     <TypeAnimation
       sequence={[
-        'Your very own\npersonal AI comanpion.',
+        'Your very own\npersonal AI companion.',
         2000,
-        "Your very own\npersonal AI freind.",
+        "Your very own\npersonal AI friend.",
         2000,
       ]}
       wrapper="span"
