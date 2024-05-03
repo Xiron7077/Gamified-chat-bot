@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 interface ReadMoreProp{
-  children: HTMLElement
+  children: React.ReactNode
 }
 
 export default function DelayShow({children}: ReadMoreProp) {

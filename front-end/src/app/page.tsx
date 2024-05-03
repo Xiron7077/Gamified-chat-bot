@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import DelayShow from "@/components/DelayShow";
-import SpringButton from "@/components/SpringButton";
+import DelayedSpringButton from "@/components/DelayedSpringButton";
 import TextType from "@/components/TextType";
 
 export default function Home() {
@@ -12,22 +12,24 @@ export default function Home() {
             Xiron
           </h1>
           <div> 
-            <p className="text-center">
+            <h2 className="text-center">
               <TextType/>
-            </p>
+            </h2>
           </div>
           <div className="mt-4">
-            <SpringButton address="/signup">
+            <DelayedSpringButton address="/signup">
               Get Started
-            </SpringButton>
+            </DelayedSpringButton>
           </div>
         </div>
         <div className="text-center mt-56 ml-10">
           <DelayShow> 
-            <p className="text-white font-Poppins inline-block text-lg -mr-5">
-              Read More
-            </p>
-            <img src="/arrow10bg.gif" className="w-24 h-16 mb-2 inline-block -rotate-90"></img>
+            <div>
+              <p className="text-white font-Poppins inline-block text-lg -mr-5">
+                Read More
+              </p>
+              <img src="/arrow10bg.gif" className="w-24 h-16 mb-2 inline-block -rotate-90"></img>
+            </div>
           </DelayShow>
         </div>
       </div>

@@ -34,3 +34,6 @@ front-end/.vercel
 # typescript
 front-end/*.tsbuildinfo
 front-end/next-env.d.ts
+
+#docs
+Gamified-Chat-App.docx
