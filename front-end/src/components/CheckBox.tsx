@@ -5,7 +5,7 @@ interface CheckBoxProp{
     children: string;
 }
 
-export function CheckBox({children}: CheckBoxProp) {
+export default function CheckBox({children}: CheckBoxProp) {
   return (
     <div>
       <div className="flex items-center space-x-2">

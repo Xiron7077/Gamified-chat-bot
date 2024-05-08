@@ -1,17 +1,20 @@
 'use client'
 
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation';
 
 interface ButtonProp {
   children: string;
-  address?: string;
-  textColor: string;
-  bgColor: string;
+  address?: string
+  textColor?: string;
+  bgColor?: string;
   contentLocation?: string;
   moreContent?: React.ReactNode
 }
 
-export default function SpringButton({children, address = "", textColor, bgColor, moreContent, contentLocation}: ButtonProp) {
+export default function SpringButton({children, address = "", textColor = "black", bgColor = "white", moreContent, contentLocation}: ButtonProp) {
+  const router = useRouter();
+
   const buttonStyle = {
     backgroundColor: bgColor
   }
@@ -36,14 +39,12 @@ export default function SpringButton({children, address = "", textColor, bgColor
     return (
       <div>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <a href={address}>
-                <button className="h-12 w-full rounded-3xl flex flex-row space-x-3 justify-center" style={buttonStyle}>
-                  <div className="mt-4">
-                    {moreContent}
-                  </div>
-                  <span className="font-Poppins text-base font-semibold text-transparent mt-[14px]" style={textStyle}>{children}</span>
-                </button>
-              </a>
+              <button type="button" onClick={() => router.push(address)} className="h-12 w-full rounded-3xl flex flex-row space-x-3 justify-center" style={buttonStyle}>
+                <div className="mt-4">
+                  {moreContent}
+                </div>
+                <span className="font-Poppins text-base font-semibold text-transparent mt-[14px]" style={textStyle}>{children}</span>
+              </button>
           </motion.div>
       </div>
     );
@@ -51,14 +52,12 @@ export default function SpringButton({children, address = "", textColor, bgColor
     return (
       <div>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <a href={address}>
-                <button className="h-12 w-full rounded-3xl flex flex-row space-x-3 justify-center" style={buttonStyle}>
-                  <span className="font-Poppins text-base font-semibold text-transparent mt-[14px]" style={textStyle}>{children}</span>
-                  <div className="mt-4">
-                    {moreContent}
-                  </div>
-                </button>
-              </a>
+              <button type="button" onClick={() => router.push(address)} className="h-12 w-full rounded-3xl flex flex-row space-x-3 justify-center" style={buttonStyle}>
+                <span className="font-Poppins text-base font-semibold text-transparent mt-[14px]" style={textStyle}>{children}</span>
+                <div className="mt-4">
+                  {moreContent}
+                </div>
+              </button>
           </motion.div>
       </div>
     );
@@ -66,11 +65,9 @@ export default function SpringButton({children, address = "", textColor, bgColor
     return (
       <div>
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <a href={address}>
-                <button className="h-12 w-full rounded-3xl" style={buttonStyle}>
-                    <span className="font-Poppins text-xl font-semibold text-transparent" style={textStyle}>{children}</span>
-                </button>
-              </a>
+              <button type="button" onClick={() => router.push(address)} className="h-12 w-full rounded-3xl" style={buttonStyle}>
+                <span className="font-Poppins text-xl font-semibold text-transparent" style={textStyle}>{children}</span>
+              </button>
           </motion.div>
       </div>
     );

@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
  
-export function Links() {
+export function NavLinks() {
   const pathname = usePathname()
  
   return (
