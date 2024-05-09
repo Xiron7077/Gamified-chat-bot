@@ -16,7 +16,7 @@ export default function Login(){
                 <div className="border-[2px] rounded-2xl p-12 backdrop-blur border-gray-400 shadow-indigo-500/50">
                     <h2 className="text-4xl ml-28 mb-7 text-white font-Poppins font-semibold">
                         Login
-                    </h2>
+                    </h2>   
                     <InputBlock label="Email" type="email" placeholder="you@example.com"/>
                     <div className="mt-3">
                         <InputBlock label="Password" type="password"/>

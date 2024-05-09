@@ -21,7 +21,7 @@ export default function SignUp(){
                         By signing up or logging in, you agree to our <br/> <a className="hover:underline hover:text-white cursor-pointer"> Terms of use </a> and <a className="hover:underline hover:text-white cursor-pointer"> Privacy Policy. </a>
                     </p>
                     <div className="mt-3">
-                        <SpringButton address="/session" textColor="linear-gradient(to right, rgb(236, 72, 153), rgb(139, 92, 246))" bgColor="white">
+                        <SpringButton address="/signup/personal-info" textColor="linear-gradient(to right, rgb(236, 72, 153), rgb(139, 92, 246))" bgColor="white">
                             Continue
                         </SpringButton>
                     </div>

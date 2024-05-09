@@ -13,6 +13,7 @@ interface inputBlockProps{
 export default function InputBlock({label = "", type = "", value = "", placeholder = ""}: inputBlockProps) {
     const [password, setPassword] = useState(value);
     const [passwordError, setPasswordError] = useState('');
+    const [inputValue, setInputValue] = useState(value);
 
     function validatePassword(password: string) : boolean{
         return password.length >= 8 || password.length === 0;
@@ -27,6 +28,11 @@ export default function InputBlock({label = "", type = "", value = "", placehold
         } else {
             setPasswordError('');
         }
+    }
+
+    function handleInputValue(e : React.ChangeEvent<HTMLInputElement>){
+        const newInputValue = e.target.value;
+        setInputValue(newInputValue);
     }
 
     const isPasswordInvalid = !!passwordError;
@@ -91,6 +97,21 @@ export default function InputBlock({label = "", type = "", value = "", placehold
                     <ConfirmPassword password={password} label="Confirm Password" type='password'/>
                 </div>
             </div>
+        );
+    } else {
+        return (
+            <form>
+                <label className="text-white ml-1 text-lg">
+                    {label}
+                </label>
+                <input 
+                    type={type}
+                    value={inputValue}
+                    onChange={handleInputValue}
+                    placeholder={placeholder} 
+                    className="border-[1px] border-gray-400 text-white caret-white bg-inherit rounded-3xl h-10 w-full px-4 focus-visible:outline-none disabled:cursor-not-allowed"
+                />
+            </form>
         );
     }
 }   
