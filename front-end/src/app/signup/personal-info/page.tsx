@@ -16,10 +16,7 @@ export default function PersonalInfo(){
                     <div className="flex flex-col space-y-4">
                         <InputBlock label="Name" type="text"/>
                         <div>
-                            <label className="ml-1 text-lg">
-                                Pronouns
-                            </label>
-                            <SelectBox/>
+                            <SelectBox label="Pronoun"/>
                         </div> 
                         <DatePicker/>
                     </div>

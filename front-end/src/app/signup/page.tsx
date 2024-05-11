@@ -6,9 +6,7 @@ export default function SignUp(){
     return (
         <div className="w-full h-full fixed bg-[url('/test.gif')] bg-cover">
             <div className="flex flex-col relative place-items-center space-y-12 top-8">
-                <div className="flex flex-row">
-                    <BackButton address="/"/>
-                </div>
+                <BackButton address="/"/>
                 <div className="border-[2px] rounded-2xl p-12 backdrop-blur border-gray-400 shadow-indigo-500/50">
                     <h2 className="text-4xl ml-32 mb-7 text-white font-Poppins font-semibold">
                         Sign Up

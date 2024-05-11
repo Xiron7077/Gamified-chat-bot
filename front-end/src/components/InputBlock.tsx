@@ -8,9 +8,10 @@ interface inputBlockProps{
     type?: string;
     value?: string;
     placeholder?: string;
+    stylesheet?: string;
 }
 
-export default function InputBlock({label = "", type = "", value = "", placeholder = ""}: inputBlockProps) {
+export default function InputBlock({label = "", type = "", value = "", placeholder = "", stylesheet = ""}: inputBlockProps) {
     const [password, setPassword] = useState(value);
     const [passwordError, setPasswordError] = useState('');
     const [inputValue, setInputValue] = useState(value);
@@ -36,6 +37,7 @@ export default function InputBlock({label = "", type = "", value = "", placehold
     }
 
     const isPasswordInvalid = !!passwordError;
+    const isStyleSheet = !!stylesheet;
 
     if(type === "email") {
         return (
@@ -109,7 +111,7 @@ export default function InputBlock({label = "", type = "", value = "", placehold
                     value={inputValue}
                     onChange={handleInputValue}
                     placeholder={placeholder} 
-                    className="border-[1px] border-gray-400 text-white caret-white bg-inherit rounded-3xl h-10 w-full px-4 focus-visible:outline-none disabled:cursor-not-allowed"
+                    className={`${isStyleSheet ? stylesheet : 'border-gray-400 bg-inherit rounded-3xl h-10 w-full px-4'} border-[1px] text-white caret-white focus-visible:outline-none disabled:cursor-not-allowed`}
                 />
             </form>
         );
