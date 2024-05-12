@@ -39,3 +39,6 @@ main/next-env.d.ts
 
 #docs
 Gamified-Chat-App.docx
+
+#secrets
+main/.env.local

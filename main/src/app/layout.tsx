@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { StringContextProvider } from "@/utils/Context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="caret-transparent">
-          {children}
+        <div className="select-none">
+          <StringContextProvider>
+            {children}
+          </StringContextProvider>
         </div>
       </body>
     </html>

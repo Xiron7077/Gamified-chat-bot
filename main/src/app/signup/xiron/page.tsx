@@ -13,11 +13,11 @@ export default function forgot_password() {
             </div>   
             <div className="z-2 w-full h-full">
                 <div className="flex flex-row max-w-screen h-full">
-                    <div className="w-[50%]">
-                        <TestBox/>
-                    </div>
                     <div className="w-[50%] flex justify-center items-center">
-                        <div className="flex flex-col relative place-items-center space-y-10 text-white font-Poppins">
+                        <img src="/model3.png"></img>
+                    </div>
+                    <div className="w-[50%] flex justify-start items-center">
+                        <div className="flex flex-col relative place-items-start space-y-10 text-white font-Poppins">
                             <label className="text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
                                 Xiron
                             </label>

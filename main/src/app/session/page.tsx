@@ -1,8 +1,11 @@
 import BackButton from "@/components/BackButton";
+import ChatPage from "@/components/OpenAI";
 import SessionOption from "@/components/SessionOption";
 import SpringButton from "@/components/SpringButton";
+import SpringEffect from "@/components/SpringEffect";
 import TestBox from "@/components/TestBox";
 import TextBox from "@/components/TextBox";
+import Chat from "@/components/Chat";
 
 export default function Session(){
     return (
@@ -38,14 +41,18 @@ export default function Session(){
                                 <label className="relative top-[4px] text-sm font-semibold">705</label>
                             </div>
                         </div>
-                        <button className="w-[25%] h-12 rounded-3xl bg-[#808080] flex justify-center items-center">
-                            <img src="line.png" className="w-10"></img>
-                        </button>
+                        <button className="w-[25%]">
+                            <SpringEffect>
+                                <div className="w-full h-12 rounded-3xl bg-[#808080] flex justify-center items-center">
+                                    <img src="line.png" className="w-10"></img>
+                                </div>
+                            </SpringEffect>      
+                        </button> 
                     </div>
                 </nav>
                 <div className="w-full h-full flex flex-row">
-                    <div className="w-[33%]">
-                        <TestBox/>
+                    <div className="w-[33%] flex justify-center items-center">
+                        <img src="model3.png" className=""></img>
                     </div>
                     <div className="flex flex-col w-[33%] relative top-2">
                         <div className="w-[30%]">
@@ -55,7 +62,11 @@ export default function Session(){
                         </div>
                         <div className="h-full flex flex-col">
                             <div className="h-[87%]">
-
+                                <div className=" relative top-4 h-full w-full flex flex-col space-y-5">
+                                    <div className="absolute bottom-8 w-full flex justify-end items-end">
+                                        <Chat/>
+                                    </div>
+                                </div>
                             </div>
                             <div className="h-[13%]">
                                 <TextBox/>  
