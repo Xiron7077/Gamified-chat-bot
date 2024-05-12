@@ -1,41 +1,41 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-front-end/node_modules
-front-end/.pnp
-front-end/.pnp.js
-front-end/.yarn/install-state.gz
+main/node_modules
+main/.pnp
+main/.pnp.js
+main/.yarn/install-state.gz
 
 # testing
-front-end/coverage
+main/coverage
 genshin-impact-paimon
 genshin_impact_-_paimon
 
 # next.js
-front-end/.next/
-front-end/out/
+main/.next/
+main/out/
 
 # production
-front-end/build
+main/build
 
 # misc
-front-end/.DS_Store
-front-end/*.pem
+main/.DS_Store
+main/*.pem
 
 # debug
-front-end/npm-debug.log*
-front-end/yarn-debug.log*
-front-end/yarn-error.log*
+main/npm-debug.log*
+main/yarn-debug.log*
+main/yarn-error.log*
 
 # local env files
-front-end/.env*.local
+main/.env*.local
 
 # vercel
-front-end/.vercel
+main/.vercel
 
 # typescript
-front-end/*.tsbuildinfo
-front-end/next-env.d.ts
+main/*.tsbuildinfo
+main/next-env.d.ts
 
 #docs
 Gamified-Chat-App.docx
